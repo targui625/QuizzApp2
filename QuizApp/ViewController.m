@@ -37,6 +37,7 @@ NSInteger score;
     
     _maruBt.hidden = YES;
     _batuBt.hidden = YES;
+    
 }
 
 // 画面フラッシュ
