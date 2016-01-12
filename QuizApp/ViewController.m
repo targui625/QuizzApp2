@@ -37,12 +37,13 @@ NSInteger score;
     
     _maruBt.hidden = YES;
     _batuBt.hidden = YES;
-    
 }
 
+// 画面フラッシュ
 -(IBAction)flashOn:(id)sender{
     _bgImage.hidden = NO;
     _bgImage.image = [UIImage imageNamed:(@"flash.png")];
+    
 }
 -(IBAction)flashOff:(id)sender{
     _bgImage.hidden = YES;
