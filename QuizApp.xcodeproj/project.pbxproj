@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C38A055E1C4521FA008D96C1 /* flash.png in Resources */ = {isa = PBXBuildFile; fileRef = C38A055D1C4521FA008D96C1 /* flash.png */; };
 		C3DE84CD1C3F6A0C00DFE08D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE84CC1C3F6A0C00DFE08D /* main.m */; };
 		C3DE84D01C3F6A0C00DFE08D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE84CF1C3F6A0C00DFE08D /* AppDelegate.m */; };
 		C3DE84D31C3F6A0C00DFE08D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DE84D21C3F6A0C00DFE08D /* ViewController.m */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C38A055D1C4521FA008D96C1 /* flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash.png; sourceTree = "<group>"; };
 		C3DE84C81C3F6A0C00DFE08D /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DE84CC1C3F6A0C00DFE08D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C3DE84CE1C3F6A0C00DFE08D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		C3DE84CB1C3F6A0C00DFE08D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C38A055D1C4521FA008D96C1 /* flash.png */,
 				C3DE84CC1C3F6A0C00DFE08D /* main.m */,
 			);
 			name = "Supporting Files";
@@ -139,6 +142,7 @@
 			files = (
 				C3DE84DB1C3F6A0C00DFE08D /* LaunchScreen.storyboard in Resources */,
 				C3DE84D81C3F6A0C00DFE08D /* Assets.xcassets in Resources */,
+				C38A055E1C4521FA008D96C1 /* flash.png in Resources */,
 				C3DE84D61C3F6A0C00DFE08D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +303,7 @@
 				C3DE84E11C3F6A0C00DFE08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

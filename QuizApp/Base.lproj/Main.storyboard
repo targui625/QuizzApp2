@@ -1,25 +1,107 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9La-4a-BQD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJj-al-leo">
+                                <rect key="frame" x="13" y="381" width="144" height="144"/>
+                                <color key="backgroundColor" red="0.71683991579999995" green="0.83890276029999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="22"/>
+                                <connections>
+                                    <action selector="batu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WYZ-Bp-kq8"/>
+                                    <action selector="flashOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9r6-zx-0CV"/>
+                                    <action selector="flashOn:" destination="BYZ-38-t0r" eventType="touchDown" id="PwG-oE-aE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qX-au-LaD">
+                                <rect key="frame" x="164" y="381" width="144" height="144"/>
+                                <color key="backgroundColor" red="1" green="0.50083822180000004" blue="0.063968108339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="22"/>
+                                <connections>
+                                    <action selector="flashOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDe-ia-jV5"/>
+                                    <action selector="flashOn:" destination="BYZ-38-t0r" eventType="touchDown" id="mqm-q6-iaB"/>
+                                    <action selector="maru:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUJ-vB-7ua"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="×" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loV-RZ-6Oy">
+                                <rect key="frame" x="13" y="369" width="143" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="229"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9k-Nd-pz3">
+                                <rect key="frame" x="165" y="392" width="143" height="122"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="138"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QhK-h0-E4Z">
+                                <rect key="frame" x="99" y="533" width="122" height="27"/>
+                                <color key="backgroundColor" red="0.99690271230000005" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN-Bold" family="Oriya Sangam MN" pointSize="22"/>
+                                <state key="normal" title="スタート"/>
+                                <connections>
+                                    <action selector="flashOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cse-bD-rP0"/>
+                                    <action selector="flashOn:" destination="BYZ-38-t0r" eventType="touchDown" id="PMw-hT-lHR"/>
+                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wlw-5a-IAt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2zP-yZ-faA">
+                                <rect key="frame" x="13" y="118" width="295" height="125"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.91965144229999995" green="0.50689160929999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">マルバツクイズ
+愛社精神チェック
+〜CBHD編〜</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tri-xf-Afd">
+                                <rect key="frame" x="59" y="46" width="202" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbf-V2-PCG">
+                                <rect key="frame" x="13" y="299" width="295" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="answerText" destination="Jbf-V2-PCG" id="9em-WL-zR8"/>
+                        <outlet property="batuBt" destination="DJj-al-leo" id="BHE-SZ-VdJ"/>
+                        <outlet property="bgImage" destination="9La-4a-BQD" id="uCw-dD-P6G"/>
+                        <outlet property="maruBt" destination="1qX-au-LaD" id="pUR-Kc-3iG"/>
+                        <outlet property="qNumLabel" destination="tri-xf-Afd" id="cQM-4g-iaC"/>
+                        <outlet property="questionText" destination="2zP-yZ-faA" id="gFc-bN-YUX"/>
+                        <outlet property="startReset" destination="QhK-h0-E4Z" id="h4x-T4-qGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="246" y="331"/>
         </scene>
     </scenes>
 </document>
