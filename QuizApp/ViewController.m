@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 {
@@ -15,6 +16,7 @@ NSInteger qNum;
 NSInteger q1,q2,q3,q4,q5;
 NSInteger score;
 }
+@property (strong, nonatomic) AVAudioPlayer *player;
 @end
 
 @implementation ViewController
@@ -111,12 +113,14 @@ NSInteger score;
 -(void)answer{
     NSInteger aNum = qNum + num;
     if (aNum == q1 || aNum == q2 || aNum == q3 || aNum == q4 || aNum == q5 ){
-        [_answerText setText:@"正解！"];
+        [_answerText setText:@"正解"];
         _answerText.backgroundColor = [UIColor orangeColor];
         score += 20;
+        [self playSoundRight];
     }else{
-        [_answerText setText:@"不正解！"];
+        [_answerText setText:@"不正解"];
         _answerText.backgroundColor = [UIColor blueColor];
+        [self playSoundWrong];
     }
     
     // ボタン一時停止
@@ -145,6 +149,37 @@ NSInteger score;
     [_answerText setText:@""];
     _answerText.backgroundColor = [UIColor clearColor];
 }
+
+- (void)playSoundRight{
+    //音楽ファイルのファイルパス
+    NSString *soundFileName =  [NSString stringWithFormat:@"right"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:soundFileName ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    //エラーを受け取る変数の準備
+    NSError *error = nil;
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (error != nil) { //エラーがあった場合
+        return;
+    }
+    [self.player play];
+}
+
+- (void)playSoundWrong{
+    //音楽ファイルのファイルパス
+    NSString *soundFileName =  [NSString stringWithFormat:@"wrong"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:soundFileName ofType:@"mp3"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    //エラーを受け取る変数の準備
+    NSError *error = nil;
+    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (error != nil) { //エラーがあった場合
+        return;
+    }
+    [self.player play];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
