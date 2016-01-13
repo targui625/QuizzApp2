@@ -165,6 +165,7 @@ NSInteger score;
     [self.player play];
 }
 
+
 - (void)playSoundWrong{
     //音楽ファイルのファイルパス
     NSString *soundFileName =  [NSString stringWithFormat:@"wrong"];
